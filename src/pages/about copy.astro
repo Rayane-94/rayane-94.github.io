@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="A propos | Rayane B" description="A propos de Rayane B">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="A propos de moi"
+				tagline="Merci d'être passé. Lisez ci-dessous pour en savoir plus sur moi-même et mon parcours."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/at-work.jpg"
+					alt="Jeanine White at work with a colleague"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Mon parcours</h2>
+				<div class="content">
+					<p>
+						Étudiant en informatique en alternance à l'EFREI, je suis passionné par le développement Web. 
+						Au cours de ma première année en alternance, j'ai eu l'occasion de travailler sur des CMS tels
+						que WordPress et IONOS, affinant ainsi mes compétences dans la création de sites Web et UX/UI .
+
+
+					</p>
+					<p>
+						J'ai aussi pu réalisés des projets plus complexes, dont ma contribution à des
+						initiatives humanitaires. En développant des scripts en Apps Script, j'ai non seulement 
+						contribué à des actions caritatives, mais j'ai aussi perfectionné ma maîtrise du JavaScript.
+
+						
+					</p>
+					<p>
+						À la recherche d'une alternance pour mon Mastère de développeur Management Full Stack pour septembre 2024, 
+						je souhaite mettre en pratique mes compétences fraîchement acquises. Mon parcours reflète
+						 ma détermination à élargir mes horizons et à contribuer au développement. Ma vision va 
+						 au-delà du code, trouvant inspiration dans les jeux vidéo, le sport et les mangas. 
+						 Cette diversité d'intérêts nourrit une perspective unique pour enrichir ma démarche créative.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Parcours Scolaire</h2>
+				<div class="content">
+
+					<p>Bac+3 : Bachelor Développement Web et application. (2023/2024)</p>
+
+					<p>Bac+2 : BTS SNIR Systèmes Numériques Option Informatique et Réseaux. (2021/2023)</p>
+
+					<p>Bac générale Sciences de l'ingénieur, Sciences économique et sociales. (2019-2020)</p>
+					
+					
+					
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p>officia unde omnis</p>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Soft Skills</h2>
+				<div class="content">
+					<p>officia unde omnis</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
