@@ -4,6 +4,4 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
 
 site: 'https://Rayane-94.github.io',
-base: 'astro-portfolio',
-
 })
