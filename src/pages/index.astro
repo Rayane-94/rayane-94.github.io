@@ -8,7 +8,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import CallToAction from '../components/CallToAction.astro';
 import Grid from '../components/Grid.astro';
 import Hero from '../components/Hero.astro';
-import Icon from '../components/Icon.astro';
+import { Icon } from 'astro-icon/components'
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 
@@ -30,15 +30,16 @@ const projects = (await getCollection('work'))
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, je m'appelle Rayane"
+					title="Bonjour, je m'appelle Rayane"
 					tagline="Je suis un étudiant passionés de dévelopement Web et mobile, basé sur Paris. A la recherche d'une alternance pour mon Master, Manager développeur Full Stack."
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Développeur</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Sportif</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Etudiant</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Bac +3 	</Pill>
+						<Pill><Icon name="code" size={40} /> Développeur</Pill>
+						<Pill><Icon name="soccer" size={40} /> Sportif</Pill>
+						<Pill><Icon name="student" size={40} /> Etudiant</Pill>
+						<Pill><Icon name="graduation" size={40} /> Bac+3</Pill>
+						
 					</div>
 				</Hero>
 

@@ -1,6 +1,0 @@
----
-import { Icon } from 'astro-icon/components';
----
-
-<!-- Loads the SVG in `/src/icons/filename.svg` -->
-<Icon name="graduation" />
