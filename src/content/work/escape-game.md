@@ -1,36 +1,61 @@
 ---
 title: Escape Game
 publishDate: 2020-03-02 00:00:00
-img: /assets/stock-1.jpg
+img: /assets/escapegame.png
 img_alt: Iridescent ripples of a bright blue and pink liquid
 description: |
-  We designed a whodunnit-style game to introduce Markdown formatting. Suspense — suspicion — syntax!
+ Dans ce projet, j'ai développé une interface Web permettant aux administrateurs de gérer un Escape Game de manière automatique, manuelle ou via des scénarios aléatoires.
 tags:
-  - HTML/CSS
+  - HTML / CSS
   - JavaScript
   - PhpMyAdmin
-  - API
+  - API                   
+  - VirtualBox
+  
 ---
 
-## Level-two heading
+## Projet de BTS SNIR 
 
-> Tell me and I forget. Teach me and I remember. Involve me and I learn.
+> Contexte
 
-Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
+Pendant mon BTS SNIR au Lycée Louis Armand, j'ai travaillé sur un projet d'Escape Game en partenariat avec la Marine Nationale et leur nouveau bateau, Antares. Les étudiants en Bac Pro étaient responsables de l'installation physique et du soudage pour les missions du jeu, ainsi que du scripting en Python pour chacune des tâches. 
 
-Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel quam elementum pulvinar etiam non.
+Leurs responsabilités comprenaient la conception et la mise en place de la salle de jeu ainsi que des différentes missions, telles que les postes de commandement et de communication, le coffre et les scénarios d'avarie.
 
-### Level-three heading
+Le problème initial de ce projet était que les missions se lançaient de manière indépendante, sans contrôle à distance possible. Les programmes ne se lançaient que lorsque le compilateur était branché à la Raspberry Pi située à côté des missions. 
 
-Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra. Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl pretium fusce.
+Cela signifiait qu'une personne devait être présente pour chaque mission, empêchant les joueurs de profiter pleinement du jeu. 
 
-### Level-three heading
+> Ma Contribution au Projet
 
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
+Ma partie dans ce projet consistait à développer l'interface web de l'Escape Game. Cela incluait la création des systèmes de connexion, de création d'équipe et de gestion des missions en fonction du mode choisi (automatique, manuel ou un scénario aléatoire). Cette interface permet aux administrateurs de contrôler le jeu de manière fluide et de l'adapter en temps réel pour améliorer l'expérience des joueurs. 
 
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
+Vous pouver consulter l'integralité du code sur <a href="https://github.com/Rayane-94/Projet-Escape-Game">Github</a>.
 
-#### Level-four heading
 
-- We noted this
-- And also this other point
+> Description des Missions
+
+L'Escape Game est composé de six missions principales, chacune dépendante des autres, et de deux missions supplémentaires d'avarie qui peuvent être activées à tout moment si les joueurs progressent trop rapidement.
+
+Les missions se déroulent dans l'ordre suivant :
+
+1. Déverrouiller le pupitre de commande
+
+2. Poste de commandement
+
+3. Coffre  
+
+4. Brouilleur
+
+5. Défis 
+
+6. Avarie (si besoin pour retarder les joueurs)
+
+Comme vous pouvez le constater dans l'image ci-dessus, les missions suivent un ordre précis. La numérotation met en évidence la progression à travers les différents postes au fil du temps. La première mission concerne le pupitre de commande, tandis que la sixième est dédiée aux scénarios d'avarie.
+
+> Répartition des Tâches
+
+Ce projet était réalisé en groupe de 3. Ma partie consistait à développer l'interface Web, un autre membre de l'équipe était chargé de développer l'API REST en PHP, et le troisième membre modifiait les scripts Python des Raspberry Pi pour implémenter des scénarios aléatoires.
+
+Durant ce projet concret, j'ai pu mettre en application les notions apprises dans mon BTS et je suis fier que l'interface ait plu aux responsables de l'Escape Game et a mes professeurs. Elle a permis de gérer le jeu efficacement a distance et de faire participer les étudiants du lycée.
+
