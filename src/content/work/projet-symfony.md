@@ -8,7 +8,7 @@ description: |
   to build AI-generated playlists that maximize houseplant health.
 tags:
   - Symfony
-  - Front
+  - Frontend
   - Backend 
 ---
 

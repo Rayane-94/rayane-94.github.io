@@ -6,11 +6,10 @@ img_alt: Iridescent ripples of a bright blue and pink liquid
 description: |
  Dans ce projet, j'ai développé une interface Web permettant aux administrateurs de gérer un Escape Game de manière automatique, manuelle ou via des scénarios aléatoires.
 tags:
-  - HTML / CSS
-  - JavaScript
-  - PhpMyAdmin
-  - API                   
-  - VirtualBox
+  - HTML / CSS 
+  - JS 
+  - PHP
+                  
   
 ---
 
@@ -28,7 +27,7 @@ Cela signifiait qu'une personne devait être présente pour chaque mission, emp�
 
 > Ma Contribution au Projet
 
-Ma partie dans ce projet consistait à développer l'interface web de l'Escape Game. Cela incluait la création des systèmes de connexion, de création d'équipe et de gestion des missions en fonction du mode choisi (automatique, manuel ou un scénario aléatoire). Cette interface permet aux administrateurs de contrôler le jeu de manière fluide et de l'adapter en temps réel pour améliorer l'expérience des joueurs. 
+Ma partie dans ce projet consistait à développer l'interface web de l'Escape Game. Cela incluait la création des systèmes de connexion, de création d'équipe et de gestion des missions en fonction du mode choisi (automatique, manuel ou un scénario aléatoire). Cette interface permet aux administrateurs de contrôler le jeu de manière fluide et de l'adapter en temps réel pour améliorer l'expérience des joueurs. Pour assurer un environnement de développement efficace, j'ai utilisé VirtualBox comme machine virtuelle, ce qui m'a permis de tester et de déployer l'interface web de manière sécurisée et isolée.
 
 Vous pouver consulter l'integralité du code sur <a href="https://github.com/Rayane-94/Projet-Escape-Game">Github</a>.
 
