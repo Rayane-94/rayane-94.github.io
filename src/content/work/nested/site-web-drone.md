@@ -10,7 +10,7 @@ tags:
   - HTML / CSS 
   - JS 
   - PHP
-  
+  - MySql
 ---
 
 evoquer MySQL et PhpMyAdmin
