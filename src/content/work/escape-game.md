@@ -9,6 +9,9 @@ tags:
   - HTML / CSS 
   - JS 
   - PHP
+  - Virtual Box
+  - phpMyAdmin
+  - MySql
                   
   
 ---
