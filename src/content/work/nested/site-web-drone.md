@@ -1,7 +1,7 @@
 ---
 title: Site Web de gestion de drone à distance
 publishDate: 2019-10-02 00:00:00
-img: /assets/stock-4.jpg
+img: /assets/DroneIR.png
 img_alt: Soft pink and baby blue water ripples together in a subtle texture.
 description: |
   Ce petit projet représente mon premier site web en local, réalisé pour apprendre les bases du Web durant mon BTS
