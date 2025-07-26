@@ -1,7 +1,7 @@
 ---
 title: Application style Messenger 
 publishDate: 2025-03-04 00:00:00
-img: /assets/Facebook_Messenger_logo_2020.svg.webp
+img: /assets/messenger.svg.webp
 img_alt: image morpion 
 description: |
   Application de messagerie en temps réel développée en équipe, avec React, NestJS, RabbitMQ et GraphQL.
