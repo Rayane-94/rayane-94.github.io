@@ -16,9 +16,11 @@ tags:
 
 Ce projet a été réalisé dans le cadre d’un travail de groupe à 3 personnes. Il s’agit d’une application de messagerie en temps réel, inspirée de Messenger, qui permet à des utilisateurs de s’inscrire, se connecter, créer des conversations à deux et s’envoyer des messages instantanément.
 
-Nous avons conçu le backend avec **NestJS**, en utilisant **GraphQL** pour les requêtes/mutations et **RabbitMQ** pour la gestion asynchrone des messages. Les messages sont stockés en base de données via **Prisma**, puis publiés en temps réel grâce aux **subscriptions GraphQL**. Le frontend, développé en **React avec TypeScript**, utilise **Apollo Client** pour interagir avec l’API GraphQL et recevoir les messages instantanément via WebSocket.
+Nous avons conçu le backend avec NestJS, en utilisant GraphQL pour les requêtes et mutations, ainsi que RabbitMQ pour la gestion asynchrone des messages. Les messages sont stockés dans une base de données via Prisma, puis diffusés en temps réel grâce aux subscriptions GraphQL.
 
-Ce projet m’a permis de renforcer mes compétences en développement full-stack, en travaillant sur une architecture moderne orientée microservices et évènements. Il a aussi mis en avant l'importance de la coordination en équipe pour développer un système complet et robuste, de l’authentification JWT jusqu’à la gestion des états côté client.
+Le frontend, développé en React avec TypeScript, utilise Apollo Client pour interagir avec l’API GraphQL et recevoir les messages instantanément via WebSocket.
+
+Ce projet web, réalisé en groupe en fin d’année sur un peu plus d’une semaine, m’a permis de consolider mes compétences en développement full-stack en mettant en pratique la majorité des technologies vues en cours à l’EFREI. Il m’a également permis de progresser en collaboration d’équipe, en participant activement à la conception d’une application moderne, fonctionnelle et bien structurée.
 
 
 Vous pouvez consulter l'intégralité du projet sur ce repertoire <a href="https://github.com/gyom2003 efrei-projet-web">Github</a>.
