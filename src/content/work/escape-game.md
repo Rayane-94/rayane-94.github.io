@@ -6,12 +6,10 @@ img_alt: Iridescent ripples of a bright blue and pink liquid
 description: |
  Dans ce projet, j'ai développé une interface Web permettant aux administrateurs de gérer un Escape Game de manière automatique, manuelle ou via des scénarios aléatoires.
 tags:
-  - HTML / CSS 
-  - JS 
+  - HTML / CSS
+  - JS
   - PHP
-  - Virtual Box
-  - phpMyAdmin
-  - MySql
+
                   
   
 ---
