@@ -8,8 +8,7 @@ description: |
 tags:
   - React Native
   - Node.js / Express.js
-  - MongoDB
-  - Cloudinary
+
 ---
 
 ### Présentation de l'association Ummanité  
@@ -43,7 +42,7 @@ Dans le cadre de ce projet, j’ai développé une **application mobile** avec l
 
 1. **Gestion des contrats** :  
    - Les chauffeurs peuvent photographier les contrats directement via l’application.  
-   - Les images sont automatiquement stockées sur un cloud (Cloudinary) et sauvegardées dans une base de données.  
+   - Les images sont automatiquement stockées sur un cloud (Cloudinary) et sauvegardées dans une base de données MongoDB.  
 
 2. **Suivi de géolocalisation** :  
    - L’application utilise la géolocalisation pour suivre en temps réel le trajet des camions.  

@@ -9,8 +9,7 @@ tags:
   - HTML / CSS 
   - JS 
   - PHP
-  - phpMyAdmin
-  - MySql
+  
 ---
 
 On a tous commencé un jour, non ? Et bien, je n'échappe pas à la règle. Voici le premier projet que j'ai réalisé en Web. Soyez indulgents, j'ai évolué depuis… enfin, je l'espère 😄.

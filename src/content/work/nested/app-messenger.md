@@ -7,11 +7,9 @@ description: |
   Application de messagerie en temps réel développée en équipe, avec React, NestJS, RabbitMQ et GraphQL.
 tags:
   - React
-  - TypeScript
   - NestJS
   - GraphQL
-  - RabbitMQ
-  - Prisma
+
 ---
 
 Ce projet a été réalisé dans le cadre d’un travail de groupe à 3 personnes. Il s’agit d’une application de messagerie en temps réel, inspirée de Messenger, qui permet à des utilisateurs de s’inscrire, se connecter, créer des conversations à deux et s’envoyer des messages instantanément.
