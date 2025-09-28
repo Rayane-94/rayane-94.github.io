@@ -45,7 +45,18 @@ const { Content } = await entry.render();
 			</header>
 			<main class="wrapper">
 				<div class="stack gap-10 content">
-					{entry.data.img && <img src={entry.data.img} alt={entry.data.img_alt || ''} />}
+					{entry.data.img && (
+						<img 
+							src={entry.data.img} 
+							alt={entry.data.img_alt || ''} 
+							class={`hero-image ${
+								entry.data.img?.includes('messenger.svg.webp') || 
+								entry.data.img?.includes('morpion.png') || 
+								entry.data.img?.includes('symfony-logo.png') 
+								? 'large-image' : ''
+							}`}
+						/>
+					)}
 					<div class="content">
 						<Content />
 					</div>
@@ -88,6 +99,29 @@ const { Content } = await entry.render();
 	.content {
 		max-width: 65ch;
 		margin-inline: auto;
+	}
+
+	.hero-image {
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-sm);
+		background: var(--gradient-subtle);
+		border: 1px solid var(--gray-800);
+		display: block;
+		margin: 0 auto;
+	}
+
+	/* Style par défaut pour toutes les images hero */
+	.hero-image {
+		width: 100%;
+		max-width: 600px;
+		height: auto;
+	}
+
+	/* Style spécial pour les images trop grandes (messenger, morpion, symfony) */
+	.hero-image.large-image {
+		max-width: 400px;
+		max-height: 300px;
+		object-fit: contain;
 	}
 
 	.content > :global(* + *) {
