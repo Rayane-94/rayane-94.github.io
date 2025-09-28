@@ -1,23 +1,41 @@
 ---
-title: Projet Symfony
+title: Projet Symfony - Mon Agenda
 publishDate: 2019-12-01 00:00:00
 img: /assets/symfony-logo.png
-img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
+img_alt: Logo Symfony - Framework PHP moderne
 description: |
-  We paired with a cutting-edge music API and a team of horticulturalists
-  to build AI-generated playlists that maximize houseplant health.
+  Ce projet m'a fait découvrir le framework Symfony pour la première fois ! J'ai développé une application web complète de gestion de contacts avec une interface moderne et intuitive.
 tags:
   - Symfony
-  - Frontend
-  - Backend 
+  - Twig
+  - Doctrine ORM
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere commodo venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam non ligula vel metus efficitur hendrerit. In hac habitasse platea dictumst. Praesent et mauris ut mi dapibus semper. Curabitur tortor justo, efficitur sit amet pretium cursus, porta eget odio. Cras ac venenatis dolor. Donec laoreet posuere malesuada. Curabitur nec mi tempor, placerat leo sit amet, tincidunt est. Quisque pellentesque venenatis magna, eget tristique nibh pulvinar in. Vestibulum vitae volutpat arcu. Aenean ut malesuada odio, sit amet pellentesque odio. Suspendisse nunc elit, blandit nec hendrerit non, aliquet at magna. Donec id leo ut nulla sagittis sodales.
+## Découverte du Framework Symfony
 
-Integer vitae nibh elit. Suspendisse eget urna eu neque bibendum pharetra. Sed interdum lectus sem, in pulvinar magna dignissim vel. Quisque maximus at urna nec laoreet. Suspendisse potenti. Vestibulum rhoncus sem ut mi pellentesque, in vestibulum erat blandit. Aliquam sodales dui ac maximus consectetur. Duis quis est vehicula, imperdiet nisl nec, fermentum erat. Duis tortor diam, pharetra eu euismod in, vehicula non eros. Curabitur facilisis dui at erat ultrices gravida. In at nunc ultricies, pulvinar mi vel, sagittis mauris. Praesent pharetra posuere purus ac imperdiet. Nulla facilisi.
+> Contexte
 
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
+Ce projet a été ma première vraie expérience avec le framework Symfony pendant ma formation à l'EFREI. Au début, j'étais un peu intimidé par la complexité apparente du framework, mais j'ai rapidement découvert à quel point il était bien conçu et logique dans son organisation.
 
-Mauris sed eros in ex maximus volutpat. Suspendisse potenti. Donec lacinia justo consectetur sagittis tempor. Proin ullamcorper nisi vitae auctor rhoncus. Sed tristique aliquam augue. Pellentesque vitae fringilla ligula. Nulla arcu elit, efficitur eu nunc malesuada, eleifend tincidunt orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer mattis orci in bibendum ultricies. Quisque a dui erat. Phasellus et vulputate ipsum. Proin metus ex, lobortis nec ornare eget, bibendum ut sapien. Aliquam in dolor lobortis, aliquam tellus a, congue augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+L'objectif était de créer une application web de gestion de contacts, que j'ai appelée **"Mon Agenda"**. Simple en apparence, mais qui m'a permis d'explorer beaucoup de concepts fondamentaux du développement web moderne.
 
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
+> Ce que j'ai réalisé
+
+J'ai développé une application complète permettant de gérer un carnet de contacts. Les utilisateurs peuvent ajouter de nouveaux contacts avec leurs informations (nom, prénom, téléphone, email) et les visualiser dans une interface claire et moderne.
+
+Ce qui m'a particulièrement plu dans ce projet, c'est la découverte de l'architecture MVC de Symfony. Tout est parfaitement organisé : les contrôleurs gèrent la logique, les entités représentent les données, et les templates Twig s'occupent de l'affichage. 
+
+> Les défis techniques rencontrés
+
+Au début, la configuration de Doctrine ORM m'a donné du fil à retordre. Comprendre comment les entités se transforment en tables de base de données, comment créer les migrations, tout ça était nouveau pour moi. Mais une fois qu'on a compris le principe  c'est beaucoup plus clair.
+
+L'intégration de Bootstrap pour le frontend était plus familière, mais j'ai appris à bien l'adapter avec les templates Twig. J'ai créé une interface qui ressemble à un site e-commerce moderne, avec des cartes pour afficher les informations et une navigation intuitive.
+
+> Technologies utilisées
+
+- **Symfony** : Le framework PHP qui m'a tant impressionné
+- **Bootstrap** : Pour une interface moderne et responsive  
+- **Doctrine ORM** : Pour la gestion élégante de la base de données
+- **Twig** : Le moteur de templates qui simplifie tout
+
+Vous pouvez consulter l'intégralité du projet sur [GitHub](https://github.com/Rayane-94/Symfony-Projet) .
