@@ -48,7 +48,18 @@ const { data, slug } = Astro.props.project;
 		grid-area: 1 / 1 / 3 / 3;
 		width: 100%;
 		height: 100%;
+		object-fit: contain;
+	}
+
+	/* Exception pour l'escape game qui garde le style original */
+	img[src*="escapegame.png"] {
 		object-fit: cover;
+	}
+
+	/* Style spécial pour le drone - cover avec positionnement centré */
+	img[src*="DroneIR.png"] {
+		object-fit: cover;
+		object-position: center center;
 	}
 
 	@media (min-width: 50em) {
