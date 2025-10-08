@@ -12,7 +12,7 @@ Vous êtes tombé sur le code source de mon portfolio ? Parfait !
 
 ## 🛠️ Made in Astro
 
-Ce portfolio a été développé avec **Astro** - un framework moderne et performant que j'ai decouvert par hasard et je me suis lancé.
+Ce portfolio a été développé avec Astro, un framework moderne et performant que j’ai découvert par hasard et que j’ai eu envie d’explorer.
 
 ## 🤝 On reste en contact ?
 
