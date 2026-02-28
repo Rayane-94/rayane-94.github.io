@@ -2,7 +2,7 @@
 title: Application style Messenger 
 publishDate: 2025-03-04 00:00:00
 img: /assets/messenger.svg.webp
-img_alt: image morpion 
+img_alt: Application de messagerie style Messenger en React et NestJS
 description: |
   Application de messagerie en temps réel développée en équipe, avec React, NestJS, RabbitMQ et GraphQL.
 tags:

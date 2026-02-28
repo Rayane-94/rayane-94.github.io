@@ -2,7 +2,7 @@
 title: Escape Game
 publishDate: 2020-03-02 00:00:00
 img: /assets/escapegame.png
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img_alt: Interface web de gestion d’un Escape Game à distance en partenariat avec la Marine nationale.
 description: |
  Dans ce projet, j'ai développé une interface Web permettant aux administrateurs de gérer un Escape Game de manière automatique, manuelle ou via des scénarios aléatoires.
 tags:

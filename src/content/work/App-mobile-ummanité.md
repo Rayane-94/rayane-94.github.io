@@ -2,7 +2,7 @@
 title: App mobile Ummanité
 publishDate: 2023-04-01 00:00:00
 img: /assets/ummanite-logo.png
-img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
+img_alt: Logo de l'association Ummanité - Application mobile bénévole
 description: |
   Ce projet est ma plus grande fierté. J'ai réalisé une application mobile de A à Z pour une association en tant que bénévole, durant mon temps libre. Je les remercie encore de m'avoir fait confiance et attribué cette mission.
 tags:
