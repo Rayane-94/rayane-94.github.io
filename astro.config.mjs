@@ -6,6 +6,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://Rayane-94.github.io',
+  site: 'https://rayane-94.github.io',
   integrations: [icon(), sitemap()]
 });
