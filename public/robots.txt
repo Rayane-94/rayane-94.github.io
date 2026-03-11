@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rayane-94.github.io/sitemap-0.xml
-Sitemap: https://rayane-94.github.io/sitemap-index.xml
+Sitemap: https://rayane-94.github.io/sitemap.xml
