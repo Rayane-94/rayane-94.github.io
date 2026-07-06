@@ -1,14 +1,14 @@
 ---
 title: JobAlign — Analyse CV / offre d'emploi par IA locale
 publishDate: 2026-05-27 00:00:00
-img: /assets/joballign-logo.svg
+img: /assets/job-align-logo.jpeg
 img_alt: JobAlign, analyseur de CV et d'offres d'emploi propulsé par une IA locale
 description: |
-  Outil qui compare un CV et une offre d'emploi grâce à une IA tournant en local (sans API externe), calcule un score de correspondance et propose des suggestions d'amélioration. Projet de groupe où j'ai développé la génération automatique de lettre de motivation ainsi qu'une partie du frontend.
+  Analyseur de CV et d'offres d'emploi propulsé par une IA locale, avec score de correspondance et génération de lettre de motivation.
 tags:
   - Python / FastAPI
-  - IA (LLM local)
-  - Frontend TypeScript
+  - IA locale (Ollama)
+  - TypeScript
 ---
 
 ## Faire matcher un CV avec une offre, sans dépendre d'une API externe
@@ -19,9 +19,9 @@ JobAlign est un projet de groupe qui répond à un besoin très concret : savoir
 
 > Ma contribution
 
-Sur ce projet réalisé à plusieurs, ma contribution s'est concentrée sur deux points précis : la **génération automatique de lettre de motivation** (à partir du LLM local, en s'appuyant sur l'analyse de matching déjà calculée entre le CV et l'offre, pour produire une lettre argumentée et personnalisée), et une partie du **frontend** (TypeScript/Vite) qui permet d'uploader ses documents et de visualiser les résultats d'analyse.
+Sur ce projet réalisé à 3, ma contribution s'est concentrée sur deux points précis : la **génération automatique de lettre de motivation** (à partir du LLM local, en s'appuyant sur l'analyse de matching déjà calculée entre le CV et l'offre, pour produire une lettre argumentée et personnalisée), et une partie du **frontend** (TypeScript/Vite) qui permet d'uploader ses documents et de visualiser les résultats d'analyse.
 
-Le reste de l'équipe a construit le pipeline principal : l'API FastAPI, l'extraction PDF, le NLP (spaCy) et le calcul d'embeddings/similarité (sentence-transformers).
+Le reste de l'équipe a construit : l'API FastAPI, l'extraction PDF, le NLP (spaCy) et le calcul d'embeddings/similarité (sentence-transformers).
 
 > Stack technique
 
@@ -30,4 +30,4 @@ Le reste de l'équipe a construit le pipeline principal : l'API FastAPI, l'extra
 - **Frontend** : TypeScript, Vite
 - **Déploiement** : Docker / Docker Compose
 
-Vous pouvez consulter le projet sur <a href="https://github.com/armanceau/JobAlign">Github</a> (repo hébergé par un camarade de promo, ma contribution y est ciblée sur la lettre de motivation et le frontend).
+Vous pouvez consulter le projet sur <a href="https://github.com/armanceau/JobAlign">Github</a>
