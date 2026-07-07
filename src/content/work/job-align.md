@@ -9,6 +9,7 @@ tags:
   - Python / FastAPI
   - IA locale (Ollama)
   - TypeScript
+order: 4
 ---
 
 ## Faire matcher un CV avec une offre, sans dépendre d'une API externe

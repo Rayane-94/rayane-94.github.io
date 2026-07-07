@@ -4,11 +4,12 @@ publishDate: 2023-04-01 00:00:00
 img: /assets/ummanite-logo.png
 img_alt: Logo de l'association Ummanité - Application mobile bénévole
 description: |
-  Ce projet est ma plus grande fierté. J'ai réalisé une application mobile de A à Z pour une association en tant que bénévole, durant mon temps libre que je continue à maintenir. Je les remercie encore de m'avoir fait confiance et de m'avoir attribué cette mission.
+  Ce projet est ma plus grande fierté. J'ai réalisé une application mobile de A à Z pour une association en tant que bénévole, durant mon temps libre, et que je continue de développer aujourd'hui. Je les remercie encore de m'avoir fait confiance et de m'avoir attribué cette mission.
 tags:
   - React Native
   - Expo
   - Node.js / Express.js
+order: 1
 
 ---
 

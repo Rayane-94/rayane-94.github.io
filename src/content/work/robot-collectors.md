@@ -4,11 +4,12 @@ publishDate: 2026-06-19 00:00:00
 img: /assets/Animation.gif
 img_alt: Simulation terminal en Rust d'un essaim de robots explorateurs et collecteurs
 description: |
-  Simulation temps réel en Rust d'un essaim de robots qui explorent une carte, communiquent et récoltent des ressources. J'ai pris en charge la logique de simulation et la concurrence.
+  Simulation temps réel en Rust d'un essaim de robots qui explorent une carte, communiquent et récoltent des ressources.
 tags:
   - Rust
   - Concurrence
   - Terminal UI (Ratatui)
+order: 3
 ---
 
 ## Un essaim de robots qui s'auto-organise
