@@ -1,11 +1,13 @@
 ---
 import CallToAction from './CallToAction.astro';
 import Icon from './CustomIcon.astro';
+
+const email = 'rayanebesrour.pro@gmail.com';
 ---
 
 <aside>
 	<h2>Vous souhaitez me contactez ? </h2>
-	<CallToAction href="mailto:rayanebesrour.pro@gmail.com">
+	<CallToAction href={`mailto:${email}`}>
 		Envoyer moi un message
 		<Icon icon="paper-plane-tilt" size="1.2em" />
 	</CallToAction>
