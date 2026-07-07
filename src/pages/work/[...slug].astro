@@ -50,11 +50,11 @@ const { Content } = await entry.render();
 							src={entry.data.img} 
 							alt={entry.data.img_alt || ''} 
 							class={`hero-image ${
-								entry.data.img?.includes('messenger.svg.webp') ||
 								entry.data.img?.includes('morpion.png') ||
 								entry.data.img?.includes('symfony-logo.png')
 								? 'large-image' : entry.data.img?.includes('scancare-logo')
-								? 'mobile-image' : ''
+								? 'mobile-image' : entry.data.img?.includes('messenger.svg.webp')
+								? 'icon-image' : ''
 							}`}
 						/>
 					)}
@@ -120,10 +120,17 @@ const { Content } = await entry.render();
 		height: auto;
 	}
 
-	/* Style spécial pour les images trop grandes (messenger, morpion, symfony) */
+	/* Style spécial pour les images trop grandes (morpion, symfony) */
 	.hero-image.large-image {
 		max-width: 400px;
 		max-height: 300px;
+		object-fit: contain;
+	}
+
+	/* Style pour les logos/icônes simples (messenger) */
+	.hero-image.icon-image {
+		max-width: 180px;
+		max-height: 180px;
 		object-fit: contain;
 	}
 
