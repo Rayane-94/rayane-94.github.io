@@ -26,7 +26,7 @@ Le reste de l'équipe a construit : l'API FastAPI, l'extraction PDF, le NLP (spa
 > Stack technique
 
 - **Backend** : Python, FastAPI
-- **IA** : Ollama (LLM local), spaCy (NLP), sentence-transformers (embeddings)
+- **IA** : Ollama (LLM local)
 - **Frontend** : TypeScript, Vite
 - **Déploiement** : Docker / Docker Compose
 

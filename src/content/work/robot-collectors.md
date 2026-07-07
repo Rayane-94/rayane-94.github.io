@@ -1,7 +1,7 @@
 ---
 title: Robot Collectors — Essaim de robots en Rust
 publishDate: 2026-06-19 00:00:00
-img: /assets/robot-collectors.svg
+img: /assets/Animation.gif
 img_alt: Simulation terminal en Rust d'un essaim de robots explorateurs et collecteurs
 description: |
   Simulation temps réel en Rust d'un essaim de robots qui explorent une carte, communiquent et récoltent des ressources. J'ai pris en charge la logique de simulation et la concurrence.
@@ -27,9 +27,9 @@ Le reste de l'équipe s'est occupé de la génération procédurale de la carte 
 
 > Stack technique
 
-- **Rust** (édition 2024)
+- **Rust** 
 - **Ratatui** pour le rendu terminal
 - **mpsc channels** et **Arc\<RwLock\>** pour la concurrence
 - **Bruit de Perlin** pour la génération de carte
 
-Vous pouvez consulter le projet sur <a href="https://github.com/armanceau/robot-collectors">Github</a> (repo hébergé par un camarade de promo, je suis contributeur à parts quasi égales sur ce projet).
+Vous pouvez consulter le projet sur <a href="https://github.com/armanceau/robot-collectors">Github</a>

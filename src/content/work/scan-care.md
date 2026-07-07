@@ -31,4 +31,4 @@ Le reste de l'équipe a travaillé sur l'authentification (Firebase), la gestion
 - **IA / OCR** : API Mistral AI
 - **Backend** : Firebase (authentification, stockage)
 
-Vous pouvez consulter le projet sur <a href="https://github.com/armanceau/scan-care">Github</a> (repo hébergé par un camarade de promo).
+Vous pouvez consulter le projet sur <a href="https://github.com/armanceau/scan-care">Github</a>
