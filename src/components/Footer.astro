@@ -11,7 +11,9 @@ const currentYear = new Date().getFullYear();
 	</div>
 	<p class="socials">
 		<a href="https://github.com/Rayane-94"> GitHub</a>
-		rayanebesrour.pro@gmail.com
+		<button type="button" class="copy-email-btn" data-copy-email="rayanebesrour.pro@gmail.com">
+			<span class="copy-email-label">rayanebesrour.pro@gmail.com</span>
+		</button>
 	</p>
 </footer>
 <style>
@@ -36,6 +38,25 @@ const currentYear = new Date().getFullYear();
 	footer a:hover,
 	footer a:focus {
 		text-decoration-color: currentColor;
+	}
+
+	.copy-email-btn {
+		font: inherit;
+		color: var(--gray-400);
+		background: transparent;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition), color var(--theme-transition);
+	}
+
+	.copy-email-btn:hover,
+	.copy-email-btn:focus-visible,
+	.copy-email-btn.copied {
+		text-decoration-color: currentColor;
+		color: var(--gray-0);
 	}
 
 	.group {

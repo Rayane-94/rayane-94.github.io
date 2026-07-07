@@ -1,12 +1,14 @@
 ---
 interface Props {
 	href: string;
+	target?: string;
 }
 
-const { href } = Astro.props;
+const { href, target } = Astro.props;
+const rel = target === '_blank' ? 'noopener noreferrer' : undefined;
 ---
 
-<a href={href}><slot /></a>
+<a href={href} target={target} rel={rel}><slot /></a>
 
 <style>
 	a {

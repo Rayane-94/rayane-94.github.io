@@ -29,6 +29,51 @@ const { title, description } = Astro.props;
 		<script>
 			// Add “loaded” class once the document has completely loaded.
 			addEventListener('load', () => document.documentElement.classList.add('loaded'));
+
+				document.addEventListener('click', async (event) => {
+					const target = event.target instanceof Element
+						? event.target.closest('[data-copy-email]')
+						: null;
+					if (!target) return;
+
+					event.preventDefault();
+					const email = target.getAttribute('data-copy-email') || '';
+					const label = target.querySelector('.copy-email-label');
+					const original = label?.textContent ?? '';
+
+					const showFeedback = () => {
+						if (!label) return;
+						label.textContent = 'Copié !';
+						target.classList.add('copied');
+						setTimeout(() => {
+							label.textContent = original;
+							target.classList.remove('copied');
+						}, 2000);
+					};
+
+					try {
+						await navigator.clipboard.writeText(email);
+						showFeedback();
+						return;
+					} catch {
+						// Clipboard API unavailable/blocked — try the legacy fallback below.
+					}
+
+					try {
+						const textarea = document.createElement('textarea');
+						textarea.value = email;
+						textarea.style.position = 'fixed';
+						textarea.style.opacity = '0';
+						document.body.appendChild(textarea);
+						textarea.focus();
+						textarea.select();
+						document.execCommand('copy');
+						document.body.removeChild(textarea);
+						showFeedback();
+					} catch {
+						// Both methods failed — the email remains visible/selectable manually.
+					}
+				});
 		</script>
 
 		<style>
