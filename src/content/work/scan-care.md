@@ -1,14 +1,17 @@
 ---
 title: Scan Care — Rappel de médicaments par scan d'ordonnance
 publishDate: 2026-01-23 00:00:00
-img: /assets/scancare-logo.svg
+img: /assets/scancare-logo.png
 img_alt: Scan Care, application mobile de rappel de médicaments par scan d'ordonnance
 description: |
-  Application mobile qui scanne une ordonnance médicale, en extrait automatiquement le contenu grâce à l'OCR et une IA, puis notifie l'utilisateur pour ne pas oublier de prendre son traitement. Projet de groupe où j'ai développé le cœur technique : capture photo, appel IA, OCR et matching des médicaments.
+  Application mobile qui scanne une ordonnance médicale et notifie l'utilisateur pour ne pas oublier son traitement, grâce à l'OCR et une IA.
 tags:
   - React Native
-  - IA (Mistral) / OCR
+  - TypeScript
+  - Expo
+  - IA / OCR (Mistral)
   - Firebase
+order: 2
 ---
 
 ## Ne plus jamais oublier de prendre son traitement
@@ -29,4 +32,4 @@ Le reste de l'équipe a travaillé sur l'authentification (Firebase), la gestion
 - **IA / OCR** : API Mistral AI
 - **Backend** : Firebase (authentification, stockage)
 
-Vous pouvez consulter le projet sur <a href="https://github.com/armanceau/scan-care">Github</a> (repo hébergé par un camarade de promo).
+Vous pouvez consulter le projet sur <a href="https://github.com/armanceau/scan-care">Github</a>

@@ -50,10 +50,11 @@ const { Content } = await entry.render();
 							src={entry.data.img} 
 							alt={entry.data.img_alt || ''} 
 							class={`hero-image ${
-								entry.data.img?.includes('messenger.svg.webp') || 
-								entry.data.img?.includes('morpion.png') || 
-								entry.data.img?.includes('symfony-logo.png') 
-								? 'large-image' : ''
+								entry.data.img?.includes('messenger.svg.webp') ||
+								entry.data.img?.includes('morpion.png') ||
+								entry.data.img?.includes('symfony-logo.png')
+								? 'large-image' : entry.data.img?.includes('scancare-logo')
+								? 'mobile-image' : ''
 							}`}
 						/>
 					)}
@@ -88,6 +89,8 @@ const { Content } = await entry.render();
 
 	.tags {
 		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 		gap: 0.5rem;
 	}
 
@@ -122,6 +125,16 @@ const { Content } = await entry.render();
 		max-width: 400px;
 		max-height: 300px;
 		object-fit: contain;
+	}
+
+	/* Style pour les screenshots mobiles en portrait (scan-care) */
+	.hero-image.mobile-image {
+		max-width: 320px;
+		max-height: 640px;
+		object-fit: contain;
+		background: none;
+		border: none;
+		box-shadow: none;
 	}
 
 	.content > :global(* + *) {

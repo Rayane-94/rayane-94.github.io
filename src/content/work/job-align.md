@@ -9,6 +9,7 @@ tags:
   - Python / FastAPI
   - IA locale (Ollama)
   - TypeScript
+order: 4
 ---
 
 ## Faire matcher un CV avec une offre, sans dépendre d'une API externe
@@ -26,7 +27,7 @@ Le reste de l'équipe a construit : l'API FastAPI, l'extraction PDF, le NLP (spa
 > Stack technique
 
 - **Backend** : Python, FastAPI
-- **IA** : Ollama (LLM local), spaCy (NLP), sentence-transformers (embeddings)
+- **IA** : Ollama (LLM local)
 - **Frontend** : TypeScript, Vite
 - **Déploiement** : Docker / Docker Compose
 
