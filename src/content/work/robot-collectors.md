@@ -4,7 +4,7 @@ publishDate: 2026-06-19 00:00:00
 img: /assets/robot-collectors.svg
 img_alt: Simulation terminal en Rust d'un essaim de robots explorateurs et collecteurs
 description: |
-  Simulation temps réel en Rust d'un essaim de robots autonomes qui explorent une carte générée procéduralement, communiquent leurs découvertes et récoltent des ressources. Projet de groupe (3 personnes) dans un style proche du Jeu de la Vie, où j'ai pris en charge la logique de simulation et la concurrence.
+  Simulation temps réel en Rust d'un essaim de robots qui explorent une carte, communiquent et récoltent des ressources. J'ai pris en charge la logique de simulation et la concurrence.
 tags:
   - Rust
   - Concurrence
