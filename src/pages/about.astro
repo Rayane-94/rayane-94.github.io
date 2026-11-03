@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
+import { Icon } from 'astro-icon/components';
 
 const formation = [
 	{
@@ -31,27 +32,67 @@ const formation = [
 	},
 ];
 
-const stack = [
+// Badges façon README GitHub : logo + couleur officielle de chaque techno
+type Badge = { nom: string; icone: string; fond: string; texte?: string };
+
+const stack: { categorie: string; items: Badge[] }[] = [
 	{
 		categorie: 'Langages et frameworks',
-		items: ['PHP', 'JavaScript', 'TypeScript', 'React Native (Expo)', 'Node.js / Express', 'Python (Pandas)', 'HTML / CSS', 'Tailwind'],
+		items: [
+			{ nom: 'PHP', icone: 'simple-icons:php', fond: '#777BB4' },
+			{ nom: 'JavaScript', icone: 'simple-icons:javascript', fond: '#F7DF1E', texte: '#000' },
+			{ nom: 'TypeScript', icone: 'simple-icons:typescript', fond: '#3178C6' },
+			{ nom: 'React Native', icone: 'simple-icons:react', fond: '#20232A', texte: '#61DAFB' },
+			{ nom: 'Expo', icone: 'simple-icons:expo', fond: '#000020' },
+			{ nom: 'Node.js', icone: 'simple-icons:nodedotjs', fond: '#5FA04E' },
+			{ nom: 'Express', icone: 'simple-icons:express', fond: '#353535' },
+			{ nom: 'Python', icone: 'simple-icons:python', fond: '#3776AB' },
+			{ nom: 'Pandas', icone: 'simple-icons:pandas', fond: '#150458' },
+			{ nom: 'HTML', icone: 'simple-icons:html5', fond: '#E34F26' },
+			{ nom: 'CSS', icone: 'simple-icons:css', fond: '#663399' },
+			{ nom: 'Tailwind', icone: 'simple-icons:tailwindcss', fond: '#06B6D4' },
+		],
 	},
 	{
 		categorie: 'Bases de données',
-		items: ['SQL', 'MongoDB'],
+		items: [
+			{ nom: 'SQL', icone: 'simple-icons:mysql', fond: '#4479A1' },
+			{ nom: 'MongoDB', icone: 'simple-icons:mongodb', fond: '#47A248' },
+		],
 	},
 	{
 		categorie: 'Qualité et déploiement',
-		items: ['Git', 'Docker', 'Cypress', 'Jenkins', 'Artifactory'],
+		items: [
+			{ nom: 'Git', icone: 'simple-icons:git', fond: '#F05032' },
+			{ nom: 'Docker', icone: 'simple-icons:docker', fond: '#2496ED' },
+			{ nom: 'Cypress', icone: 'simple-icons:cypress', fond: '#69D3A7', texte: '#04201A' },
+			{ nom: 'Jenkins', icone: 'simple-icons:jenkins', fond: '#D24939' },
+			{ nom: 'Artifactory', icone: 'simple-icons:jfrog', fond: '#40BE46' },
+			{ nom: 'Power BI', icone: 'simple-icons:powerbi', fond: '#F2C811', texte: '#000' },
+		],
 	},
 	{
 		categorie: 'IA',
-		items: ['Claude Code', 'GitHub Copilot', 'RAG', 'MCP', 'Embeddings', 'Ollama'],
+		items: [
+			{ nom: 'Claude Code', icone: 'simple-icons:claude', fond: '#D97757' },
+			{ nom: 'GitHub Copilot', icone: 'simple-icons:githubcopilot', fond: '#24292F' },
+			{ nom: 'Ollama', icone: 'simple-icons:ollama', fond: '#3F3F46' },
+			{ nom: 'MCP', icone: 'simple-icons:modelcontextprotocol', fond: '#1F2937' },
+			{ nom: 'RAG', icone: 'mdi:database-search', fond: '#6E40C9' },
+			{ nom: 'Embeddings', icone: 'mdi:vector-triangle', fond: '#0E7490' },
+		],
 	},
-	{
-		categorie: 'Ce qui me caractérise',
-		items: ['Autonomie', 'Curiosité', 'Persévérance'],
-	},
+];
+
+const qualites = [
+	'Autonomie',
+	'Curiosité',
+	'Persévérance',
+	'Adaptabilité',
+	'Rigueur',
+	"Esprit d'équipe",
+	'Force de proposition',
+	
 ];
 ---
 
@@ -126,12 +167,16 @@ const stack = [
 				<h2 class="section-title">Formation</h2>
 				<div class="content">
 					<ol class="timeline">
-						{formation.map((f) => (
-							<li>
-								<span class="niveau">{f.niveau}</span>
-								<div>
+						{formation.map((f, i) => (
+							<li class:list={['etape', { recente: i === 0 }]}>
+								<span class="point" aria-hidden="true"></span>
+								<div class="carte">
+									<div class="entete">
+										<span class="dates">{f.dates}</span>
+										<span class="niveau">{f.niveau}</span>
+									</div>
 									<p class="titre">{f.titre}</p>
-									<p class="meta">{f.lieu} · {f.dates}</p>
+									<p class="meta">{f.lieu}</p>
 								</div>
 							</li>
 						))}
@@ -145,11 +190,22 @@ const stack = [
 					{stack.map((groupe) => (
 						<div>
 							<h3 class="categorie">{groupe.categorie}</h3>
-							<ul class="pills">
-								{groupe.items.map((item) => <li>{item}</li>)}
+							<ul class="badges">
+								{groupe.items.map((item) => (
+									<li style={`--fond: ${item.fond}; --texte: ${item.texte ?? '#fff'}`}>
+										<Icon name={item.icone} aria-hidden="true" />
+										{item.nom}
+									</li>
+								))}
 							</ul>
 						</div>
 					))}
+					<div>
+						<h3 class="categorie">Ce qui me caractérise</h3>
+						<ul class="qualites">
+							{qualites.map((q) => <li>{q}</li>)}
+						</ul>
+					</div>
 				</div>
 			</section>
 
@@ -159,7 +215,7 @@ const stack = [
 					<p>
 						Je suis un touche-à-tout. J'aime découvrir des choses nouvelles, surtout dans des domaines que je ne
 						connais pas. J'appelle ça la <strong>pensée en arborescence</strong> : une question en amène une
-						autre, et je me retrouve à lire de la sociologie, de la psychologie, de l'histoire, de la théologie ou
+						autre, et je me retrouve à lire de la sociologie, de la psychologie, de l'histoire, ou
 						de la biologie. J'aime aussi les débats et les échanges, apprendre de l'expérience des autres et
 						partager la mienne.
 					</p>
@@ -283,34 +339,92 @@ const stack = [
 
 	/* Frise de formation */
 	.timeline {
+		position: relative;
 		list-style: none;
 		margin: 0;
 		padding: 0;
 		display: flex;
 		flex-direction: column;
-		gap: 1.25rem;
+		gap: 1rem;
 	}
 
-	.timeline li {
-		display: grid;
-		grid-template-columns: 4rem 1fr;
-		gap: 1rem;
-		align-items: start;
+	/* Ligne verticale qui relie les étapes */
+	.timeline::before {
+		content: '';
+		position: absolute;
+		top: 1.5rem;
+		bottom: 1.5rem;
+		left: 0.45rem;
+		width: 2px;
+		background: linear-gradient(var(--accent-regular), var(--gray-800));
+	}
+
+	.etape {
+		position: relative;
+		padding-left: 2.25rem;
+	}
+
+	.point {
+		position: absolute;
+		top: 1.35rem;
+		left: 0;
+		width: 1rem;
+		height: 1rem;
+		border: 2px solid var(--accent-regular);
+		border-radius: 50%;
+		background-color: var(--gray-999);
+	}
+
+	.recente .point {
+		background-color: var(--accent-regular);
+		box-shadow: 0 0 0 4px var(--accent-subtle-overlay);
+	}
+
+	.carte {
+		padding: 1rem 1.25rem;
+		border: 1px solid var(--gray-800);
+		border-radius: 1rem;
+		background-color: var(--gray-999);
+		box-shadow: var(--shadow-sm);
+		transition: transform 0.2s ease, border-color 0.2s ease;
+	}
+
+	.carte:hover {
+		transform: translateX(4px);
+		border-color: var(--accent-regular);
+	}
+
+	.recente .carte {
+		border-color: var(--accent-regular);
+	}
+
+	.entete {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 0.75rem;
+		margin-bottom: 0.25rem;
+	}
+
+	.dates {
+		font-size: var(--text-sm);
+		font-weight: 600;
+		color: var(--accent-regular);
 	}
 
 	.niveau {
-		padding: 0.2rem 0;
-		border-radius: 0.5rem;
+		padding: 0.1rem 0.6rem;
+		border-radius: 999rem;
 		background-color: var(--accent-subtle-overlay);
 		color: var(--accent-regular);
 		font-size: var(--text-sm);
 		font-weight: 600;
-		text-align: center;
 	}
 
 	.titre {
 		color: var(--gray-0);
-		font-weight: 500;
+		font-weight: 600;
+		line-height: 1.4;
 	}
 
 	.meta {
@@ -318,7 +432,7 @@ const stack = [
 		color: var(--gray-400);
 	}
 
-	/* Stack en pastilles */
+	/* Stack en badges colorés */
 	.stack-groups {
 		gap: 1.5rem;
 	}
@@ -330,7 +444,8 @@ const stack = [
 		color: var(--gray-0);
 	}
 
-	.pills {
+	.badges,
+	.qualites {
 		list-style: none;
 		margin: 0;
 		padding: 0;
@@ -339,20 +454,40 @@ const stack = [
 		gap: 0.5rem;
 	}
 
-	.pills li {
-		padding: 0.3rem 0.85rem;
-		border: 1px solid var(--gray-800);
-		border-radius: 999rem;
-		background-color: var(--gray-999);
-		color: var(--gray-300);
+	.badges li {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.45rem;
+		padding: 0.35rem 0.75rem;
+		border-radius: 0.5rem;
+		background-color: var(--fond);
+		color: var(--texte);
 		font-size: var(--text-sm);
-		line-height: 1.5;
-		transition: border-color var(--theme-transition), color var(--theme-transition);
+		font-weight: 600;
+		line-height: 1.4;
+		box-shadow: var(--shadow-sm);
+		transition: transform 0.15s ease, box-shadow 0.15s ease;
 	}
 
-	.pills li:hover {
-		border-color: var(--accent-regular);
-		color: var(--gray-0);
+	.badges li:hover {
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-md);
+	}
+
+	.badges :global(svg) {
+		width: 1.1em;
+		height: 1.1em;
+		flex-shrink: 0;
+	}
+
+	.qualites li {
+		padding: 0.35rem 0.9rem;
+		border-radius: 999rem;
+		background-color: var(--accent-subtle-overlay);
+		color: var(--accent-regular);
+		font-size: var(--text-sm);
+		font-weight: 600;
+		line-height: 1.4;
 	}
 
 	@media (min-width: 50em) {
