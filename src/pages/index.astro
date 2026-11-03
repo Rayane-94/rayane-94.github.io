@@ -36,14 +36,14 @@ const projects = (await getCollection('work'))
 			<header class="hero">
 				<Hero
 					title="Bonjour, je m'appelle Rayane"
-					tagline="Je suis un étudiant passionés de dévelopement Web et mobile, basé sur Paris. A la recherche d'une alternance pour mon Master, Manager développeur Full Stack."
+					tagline="Développeur Full Stack passionné par le Web et le mobile, basé à Paris. Diplômé d'un Master Manager Développeur Full Stack, avec 3 ans d'expérience en alternance, je suis à la recherche d'un CDI."
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon name="student" size={40} /> Etudiant</Pill>
-						<Pill><Icon name="code" size={40} /> Développeur</Pill>
+						<Pill><Icon name="code" size={40} /> Développeur Full Stack</Pill>
+						<Pill><Icon name="briefcase" size={40} /> 3 ans d'expérience</Pill>
+						<Pill><Icon name="graduation" size={40} /> Bac+5</Pill>
 						<Pill><Icon name="soccer" size={40} /> Sportif</Pill>
-						<Pill><Icon name="graduation" size={40} /> Bac+4</Pill>
 						
 					</div>
 				</Hero>
@@ -126,9 +126,9 @@ const projects = (await getCollection('work'))
 	}
 
 	.hero img {
-		aspect-ratio: 5 / 4;
+		aspect-ratio: 4 / 5;
 		object-fit: cover;
-		object-position: top;
+		object-position: center;
 		border-radius: 1.5rem;
 		box-shadow: var(--shadow-md);
 	}

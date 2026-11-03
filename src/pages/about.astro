@@ -3,82 +3,170 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
+
+const formation = [
+	{
+		niveau: 'Bac+5',
+		titre: 'Mastère Développeur Manager Full Stack',
+		lieu: 'EFREI, en alternance',
+		dates: '2024 - 2026',
+	},
+	{
+		niveau: 'Bac+3',
+		titre: "Bachelor Concepteur Développeur d'Applications",
+		lieu: 'EFREI',
+		dates: '2023 - 2024',
+	},
+	{
+		niveau: 'Bac+2',
+		titre: 'BTS SNIR, option Informatique et Réseaux',
+		lieu: 'Systèmes Numériques',
+		dates: '2021 - 2023',
+	},
+	{
+		niveau: 'Bac',
+		titre: 'Bac général',
+		lieu: "Spécialités Sciences de l'ingénieur et SES",
+		dates: '2019 - 2020',
+	},
+];
+
+const stack = [
+	{
+		categorie: 'Langages et frameworks',
+		items: ['PHP', 'JavaScript', 'TypeScript', 'React Native (Expo)', 'Node.js / Express', 'Python (Pandas)', 'HTML / CSS', 'Tailwind'],
+	},
+	{
+		categorie: 'Bases de données',
+		items: ['SQL', 'MongoDB'],
+	},
+	{
+		categorie: 'Qualité et déploiement',
+		items: ['Git', 'Docker', 'Cypress', 'Jenkins', 'Artifactory'],
+	},
+	{
+		categorie: 'IA',
+		items: ['Claude Code', 'GitHub Copilot', 'RAG', 'MCP', 'Embeddings', 'Ollama'],
+	},
+	{
+		categorie: 'Ce qui me caractérise',
+		items: ['Autonomie', 'Curiosité', 'Persévérance'],
+	},
+];
 ---
 
-<BaseLayout title="A propos | Rayane B" description="A propos de Rayane B">
+<BaseLayout
+	title="À propos | Rayane B"
+	description="Développeur full-stack (PHP, React Native, Node.js), trois ans d'alternance dont deux chez SNCF Réseau. Disponible pour un CDI en Île-de-France."
+>
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
-				title="A propos de moi"
-				tagline="Merci d'être passé. Lisez ci-dessous pour en savoir plus sur moi-même et mon parcours."
+				title="À propos de moi"
+				tagline="Développeur full-stack, trois ans d'alternance entre l'EFREI et le terrain. Voilà qui je suis."
 			>
 				<img
 					width="1553"
 					height="873"
 					src="/assets/rayane_rando.jpg"
-					alt="Image A propos de moi"
+					alt="Rayane en randonnée"
 				/>
 			</Hero>
 
 			<section>
 				<h2 class="section-title">Mon parcours</h2>
 				<div class="content">
+					<p class="dispo">
+						<span class="dot" aria-hidden="true"></span>
+						Disponible pour un CDI en Île-de-France
+					</p>
+
 					<p>
-						Étudiant en informatique en alternance à l'EFREI, je suis passionné par le développement Web. 
-						Au cours de ma première année en alternance, j'ai eu l'occasion de travailler sur des CMS tels
-						que WordPress et IONOS, affinant ainsi mes compétences dans la création de sites Web et UX/UI .
-
-
+						Je suis développeur full-stack et je sors d'un Mastère Développeur Manager Full Stack à l'EFREI,
+						que j'ai fait en alternance. Ça fait trois ans que j'alterne entre l'école et le terrain, et
+						honnêtement, c'est le terrain qui m'a le plus appris.
 					</p>
+
+					<div class="xp">
+						<h3>SNCF Réseau <span>2 ans</span></h3>
+						<p>
+							J'ai développé seul une <strong>application web nationale de gestion du patrimoine télécom</strong>,
+							utilisée tous les jours par une quinzaine d'ingénieurs. Je m'en suis occupé de bout en bout : front,
+							back, base de données, déploiement et maintien en production. Derrière, il y a une vraie chaîne de
+							qualité (tests Cypress, intégration continue Jenkins, Docker). J'y ai aussi écrit des scripts Python
+							qui traitent des fichiers de plusieurs dizaines de milliers de lignes et alimentent des tableaux Power BI.
+						</p>
+					</div>
+
+					<div class="xp">
+						<h3>Ummanité, puis bénévolat <span>depuis 3 ans</span></h3>
+						<p>
+							Avant la SNCF, j'ai passé un an chez Ummanité, une association qui vient en aide aux personnes
+							sans-abri. J'y ai démarré une <strong>application mobile</strong> que je n'ai pas eu le temps de
+							terminer. Le projet me tenait à cœur, alors je continue de la développer bénévolement sur mon temps
+							perso. React Native côté mobile, une API Node/Express que j'ai conçue de A à Z, MongoDB, Cloudinary
+							pour les images. Elle permet de scanner des documents avec de l'OCR et de suivre un véhicule en GPS
+							en temps réel pour optimiser les tournées.
+						</p>
+					</div>
+
 					<p>
-						J'ai aussi pu réalisés des projets plus complexes, dont ma contribution à des
-						initiatives humanitaires. En développant des scripts en Apps Script, j'ai non seulement 
-						contribué à des actions caritatives, mais j'ai aussi perfectionné ma maîtrise du JavaScript.
-
-						
+						J'utilise l'IA tous les jours (Claude Code, Copilot, RAG, MCP), mais avec du recul. Sur cette appli,
+						l'OCR généré avec l'IA inventait du texte quand une photo était illisible au lieu de renvoyer une
+						erreur. J'ai ajouté un contrôle de qualité de l'image en amont :
+						<strong>tester ce que l'IA ne testait pas</strong>. C'est un peu comme ça que je vois le métier
+						aujourd'hui.
 					</p>
-					<p>
-						À la recherche d'une alternance pour mon Mastère de développeur Management Full Stack pour septembre 2024, 
-						je souhaite mettre en pratique mes compétences fraîchement acquises. Mon parcours reflète
-						 ma détermination à élargir mes horizons et à contribuer au développement. Ma vision va 
-						 au-delà du code, trouvant inspiration dans les jeux vidéo, le sport et les mangas. 
-						 Cette diversité d'intérêts nourrit une perspective unique pour enrichir ma démarche créative.
-					</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Parcours Scolaire</h2>
-				<div class="content">
 
-					<p>Bac+5  : Master Manager Développeur Full Stack. (2024/2026)</p>
-
-					<p>Bac+3 : Bachelor Développement Web et application. (2023/2024)</p>
-
-					<p>Bac+2 : BTS SNIR Systèmes Numériques Option Informatique et Réseaux. (2021/2023)</p>
-
-					<p>Bac générale Sciences de l'ingénieur, Sciences économique et sociales. (2019-2020)</p>
-					
-					
-					
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Ma personalité</h2>
-				<div class="content">
-					<p> Comme vous avez pu le voir dans mon parcours scolaire je suis un touche a tout, j'aime découvrir de nouvelle
-						chose et particulièrement dans des domaine que je ne connais pas.J'appelle cela la pensée en arborescence, 
-						je m'interresse a des domaine comme la sociologie psychologie, l'histoire, les livres théologique et autres, la biologie, les débats et bien plus 
-						que vous découvrir à force de me connaitre.Je suis quelqu'un qui aime échanger avec les gens et apprendre de 
-						l'experience des autre ainsi que partager la mienne.
-					</p>
+					<p>En dehors du code, il y a la rando, le sport, les jeux vidéo et les mangas.</p>
 				</div>
 			</section>
 
 			<section>
-				<h2 class="section-title">Skills</h2>
+				<h2 class="section-title">Formation</h2>
 				<div class="content">
-					<p>Curiosité, Persévérance, Résilience, Adaptabilité, Collaboration, Communication,	
-						 Résolution de problèmes, Créativité, Gestion du temps, Leadership. </p>
+					<ol class="timeline">
+						{formation.map((f) => (
+							<li>
+								<span class="niveau">{f.niveau}</span>
+								<div>
+									<p class="titre">{f.titre}</p>
+									<p class="meta">{f.lieu} · {f.dates}</p>
+								</div>
+							</li>
+						))}
+					</ol>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Stack</h2>
+				<div class="content stack-groups">
+					{stack.map((groupe) => (
+						<div>
+							<h3 class="categorie">{groupe.categorie}</h3>
+							<ul class="pills">
+								{groupe.items.map((item) => <li>{item}</li>)}
+							</ul>
+						</div>
+					))}
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Ma personnalité</h2>
+				<div class="content">
+					<p>
+						Je suis un touche-à-tout. J'aime découvrir des choses nouvelles, surtout dans des domaines que je ne
+						connais pas. J'appelle ça la <strong>pensée en arborescence</strong> : une question en amène une
+						autre, et je me retrouve à lire de la sociologie, de la psychologie, de l'histoire, de la théologie ou
+						de la biologie. J'aime aussi les débats et les échanges, apprendre de l'expérience des autres et
+						partager la mienne.
+					</p>
+					<p>
+						C'est ce qui m'a aidé à rentrer dans le ferroviaire à la SNCF, un domaine très technique dont j'ai
+						fini par faire le sujet de mon mémoire.
+					</p>
 				</div>
 			</section>
 		</main>
@@ -121,6 +209,19 @@ import Hero from '../components/Hero.astro';
 
 	.content {
 		grid-column: 2 / 4;
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+		line-height: 1.7;
+	}
+
+	.content p {
+		margin: 0;
+	}
+
+	.content strong {
+		color: var(--gray-0);
+		font-weight: 600;
 	}
 
 	.content :global(a) {
@@ -132,6 +233,126 @@ import Hero from '../components/Hero.astro';
 	.content :global(a:hover),
 	.content :global(a:focus) {
 		text-decoration-color: currentColor;
+	}
+
+	/* Badge de disponibilité */
+	.dispo {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.6rem;
+		align-self: flex-start;
+		padding: 0.4rem 1rem;
+		border: 1px solid var(--gray-800);
+		border-radius: 999rem;
+		background-color: var(--gray-999);
+		color: var(--gray-0);
+		font-size: var(--text-sm);
+		font-weight: 500;
+		box-shadow: var(--shadow-sm);
+	}
+
+	.dot {
+		width: 0.55rem;
+		height: 0.55rem;
+		border-radius: 50%;
+		background-color: #22c55e;
+		box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+	}
+
+	/* Blocs d'expérience */
+	.xp {
+		padding-left: 1.25rem;
+		border-left: 2px solid var(--accent-regular);
+	}
+
+	.xp h3 {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.25rem 0.75rem;
+		margin: 0 0 0.4rem;
+		font-size: var(--text-lg);
+		color: var(--gray-0);
+	}
+
+	.xp h3 span {
+		font-size: var(--text-sm);
+		font-weight: 400;
+		color: var(--gray-400);
+	}
+
+	/* Frise de formation */
+	.timeline {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+
+	.timeline li {
+		display: grid;
+		grid-template-columns: 4rem 1fr;
+		gap: 1rem;
+		align-items: start;
+	}
+
+	.niveau {
+		padding: 0.2rem 0;
+		border-radius: 0.5rem;
+		background-color: var(--accent-subtle-overlay);
+		color: var(--accent-regular);
+		font-size: var(--text-sm);
+		font-weight: 600;
+		text-align: center;
+	}
+
+	.titre {
+		color: var(--gray-0);
+		font-weight: 500;
+	}
+
+	.meta {
+		font-size: var(--text-sm);
+		color: var(--gray-400);
+	}
+
+	/* Stack en pastilles */
+	.stack-groups {
+		gap: 1.5rem;
+	}
+
+	.categorie {
+		margin: 0 0 0.6rem;
+		font-size: var(--text-base);
+		font-weight: 600;
+		color: var(--gray-0);
+	}
+
+	.pills {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.pills li {
+		padding: 0.3rem 0.85rem;
+		border: 1px solid var(--gray-800);
+		border-radius: 999rem;
+		background-color: var(--gray-999);
+		color: var(--gray-300);
+		font-size: var(--text-sm);
+		line-height: 1.5;
+		transition: border-color var(--theme-transition), color var(--theme-transition);
+	}
+
+	.pills li:hover {
+		border-color: var(--accent-regular);
+		color: var(--gray-0);
 	}
 
 	@media (min-width: 50em) {
